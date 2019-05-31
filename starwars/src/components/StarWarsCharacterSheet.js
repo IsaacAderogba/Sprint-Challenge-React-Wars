@@ -39,7 +39,7 @@ class StarWarsCharacterSheet extends React.Component {
             <StarWarsCharacterStats data={skin_color} dataHeading='Skin Color' />
         </div>
         <div className='MoreInfoContainer'>
-            <StarWarsCharacterLinks listTitle='Species' listOfLinks={species}/>
+            <StarWarsCharacterLinks listTitle='Species' listOfLinks={species} listData={this.props.starwarsSpecies}/>
             <StarWarsCharacterLinks listTitle='Starships'/>
             <StarWarsCharacterLinks listTitle='Vehicles'/>
             <StarWarsCharacterLinks listTitle='Films'/>

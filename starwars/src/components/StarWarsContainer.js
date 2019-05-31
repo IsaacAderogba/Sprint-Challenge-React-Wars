@@ -36,10 +36,10 @@ class StarWarsContainer extends React.Component {
             <StarWarsCharacterSheet
               key={char.name}
               starwarsChar={char}
-              starwarsFilms={this.props.starwarsFilms}
-              starwarsSpecies={this.props.starwarsSpecies}
-              starwarsStarships={this.props.starwarsStarships}
-              starwarsVehicles={this.props.starwarsVehicles}
+              starwarsFilms={filmNames}
+              starwarsSpecies={speciesNames}
+              starwarsStarships={starshipNames}
+              starwarsVehicles={vehicleNames}
             />
           );
         })}
