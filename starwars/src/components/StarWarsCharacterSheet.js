@@ -1,10 +1,12 @@
 import React from 'react';
+import './StarWars.css';
+
 
 class StarWarsCharacterSheet extends React.Component {
 
     render() {
         return (
-            <li>{this.props.starwarsChar.name}</li>
+            <li className='StarWarsCharacterSheet'>{this.props.starwarsChar.name}</li>
         );
     }
 }

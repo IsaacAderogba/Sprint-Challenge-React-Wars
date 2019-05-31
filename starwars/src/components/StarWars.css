@@ -1,0 +1,14 @@
+.StarWarsContainer {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.StarWarsCharacterSheet {
+    list-style-type: none;
+    background: white;
+    width: 40%;
+    margin: 10px;
+}
