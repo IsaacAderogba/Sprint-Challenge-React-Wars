@@ -9,6 +9,8 @@
 .StarWarsCharacterSheet {
     list-style-type: none;
     background: white;
-    width: 40%;
     margin: 10px;
+    border-radius: 4px;
+    max-width: 400px;
+    padding: 0 10px;
 }
