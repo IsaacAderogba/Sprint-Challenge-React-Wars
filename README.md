@@ -30,11 +30,17 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [X] What does it mean to _think_ in react?
 
-Thinkin React forces the user to think about state and component 
+Thinking in React forces the user to think about state and component architecture before they start building an application. For example, the creators of React encourage developers to 1) break the UI into a component hierarchy, 2) build a static version of the UI, 3) identify the minimal representation of state, 4) identify where this state should live and 5) add inverse data flow.
 
-- [ ] Describe state.
+These 5 elements are essential in any react app.
 
-- [ ] Describe props.
+- [X] Describe state.
+
+State is the data of the app at a point in time, and it's very much like the 'heart' of any react application. It's mutable, meaning that it can be updated or changed via the setState method, and each time this happens, it then 'pumps' its changes to other child compoonents that need it
+
+- [X] Describe props.
+
+Props are something that every component can receive. They are passed in as arguments, but are immutable meaning that we can not change them. State is typically passed down as props, so when the state is updated, the props passed down to the child component are also updated. In reality, these are *new* instances of the prop being passed down, as we've previously held that props themselves are immutable.
 
 ## Project Set Up
 
