@@ -97,8 +97,6 @@ class App extends Component {
         starwarsSpecies={this.state.starwarsSpecies}
         starwarsStarships={this.state.starwarsStarships}
         starwarsVehicles={this.state.starwarsVehicles}
-
-
         />
       </div>
     );
