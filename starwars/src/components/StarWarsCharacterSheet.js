@@ -39,7 +39,7 @@ class StarWarsCharacterSheet extends React.Component {
             <StarWarsCharacterStats data={skin_color} dataHeading='Skin Color' />
         </div>
         <div className='MoreInfoContainer'>
-            <StarWarsCharacterLinks listTitle='Species'/>
+            <StarWarsCharacterLinks listTitle='Species' listOfLinks={species}/>
             <StarWarsCharacterLinks listTitle='Starships'/>
             <StarWarsCharacterLinks listTitle='Vehicles'/>
             <StarWarsCharacterLinks listTitle='Films'/>
@@ -52,3 +52,4 @@ class StarWarsCharacterSheet extends React.Component {
 export default StarWarsCharacterSheet;
 
 // {this.props.starwarsChar.name}
+// apiUrl="https://swapi.co/api/species"
