@@ -1,20 +1,17 @@
-/* eslint-disable no-useless-constructor */
-import React from 'react';
+import React from "react";
+import StarWarsCharacterSheet from "./StarWarsCharacterSheet";
 
 class StarWarsContainer extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  render() {
 
-    render() {
-        console.log(this.props.starwarsChars)
-
-        return (
-            <div>
-                
-            </div>  
-        );
-    }
+    return (
+      <ul>
+        {this.props.starwarsChars.map(char => {
+          return <StarWarsCharacterSheet key={char.name} starwarsChar={char}/>;
+        })}
+      </ul>
+    );
+  }
 }
 
 export default StarWarsContainer;
