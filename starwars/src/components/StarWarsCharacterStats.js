@@ -6,7 +6,7 @@ class StarWarsCharacterStats extends React.Component {
     render() {
 
         return(
-            <div class="StarWarsCharacterStats">
+            <div className="StarWarsCharacterStats">
                 <h3>{this.props.data}</h3>
                 <p>{this.props.dataHeading}</p>
             </div>

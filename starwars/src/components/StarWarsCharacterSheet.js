@@ -1,6 +1,7 @@
 import React from "react";
 import "./StarWars.css";
 import StarWarsCharacterStats from './StarWarsCharacterStats'
+import StarWarsCharacterLinks from './StarWarsCharacterLinks'
 
 class StarWarsCharacterSheet extends React.Component {
   render() {
@@ -33,9 +34,15 @@ class StarWarsCharacterSheet extends React.Component {
           {getDetails}.
         </p>
         <div className='CharacterStatsContainer'>
-            <StarWarsCharacterStats data={height} dataHeading={'Height'} />
-            <StarWarsCharacterStats data={mass} dataHeading={'Mass'} />
-            <StarWarsCharacterStats data={skin_color} dataHeading={'Skin Color'} />
+            <StarWarsCharacterStats data={height} dataHeading='Height' />
+            <StarWarsCharacterStats data={`${mass} kg`} dataHeading='Mass' />
+            <StarWarsCharacterStats data={skin_color} dataHeading='Skin Color' />
+        </div>
+        <div className='MoreInfoContainer'>
+            <StarWarsCharacterLinks listTitle='Species'/>
+            <StarWarsCharacterLinks listTitle='Starships'/>
+            <StarWarsCharacterLinks listTitle='Vehicles'/>
+            <StarWarsCharacterLinks listTitle='Films'/>
         </div>
       </li>
     );
