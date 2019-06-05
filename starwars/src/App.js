@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
+import StarWarsContainer from './components/StarWarsContainer'
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      starwarsFilms: [],
+      starwarsSpecies: [],
+      starwarsStarships: [],
+      starwarsVehicles: []
     };
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
+    this.getFilms('https://swapi.co/api/films/');
+    this.getSpecies('https://swapi.co/api/species/');
+    this.getStarships('https://swapi.co/api/starships/');
+    this.getVehicles('https://swapi.co/api/vehicles/');
   }
 
   getCharacters = URL => {
-    // feel free to research what this code is doing.
-    // At a high level we are calling an API to fetch some starwars data from the open web.
-    // We then take that data and resolve it our state.
     fetch(URL)
       .then(res => {
         return res.json();
@@ -29,10 +35,69 @@ class App extends Component {
       });
   };
 
+  getFilms = URL => {
+    fetch(URL)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ starwarsFilms: data.results });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  };
+
+  getSpecies = URL => {
+    fetch(URL)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ starwarsSpecies: data.results });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  };
+
+  getStarships = URL => {
+    fetch(URL)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ starwarsStarships: data.results });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  };
+
+  getVehicles = URL => {
+    fetch(URL)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ starwarsVehicles: data.results });
+      })
+      .catch(err => {
+        throw new Error(err);
+      });
+  };
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <StarWarsContainer 
+        starwarsChars={this.state.starwarsChars} 
+        starwarsFilms={this.state.starwarsFilms}
+        starwarsSpecies={this.state.starwarsSpecies}
+        starwarsStarships={this.state.starwarsStarships}
+        starwarsVehicles={this.state.starwarsVehicles}
+        />
       </div>
     );
   }
